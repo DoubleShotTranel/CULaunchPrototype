@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Welcome Back!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#009688" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="64dp" />
+
+    <Button
+        android:id="@+id/volunteerB"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="#71E0B6"
+        android:text="Volunteer Opportunities" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/requestB"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="#71E0B6"
+        android:onClick="onRequestButtonPressed"
+        android:text="Post Request" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/portfolioB"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="#71E0B6"
+        android:text="Portfolio" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/border" />
+
+</LinearLayout>
