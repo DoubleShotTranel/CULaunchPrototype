@@ -31,14 +31,21 @@
         android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/nameDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/phoneDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/emailDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"

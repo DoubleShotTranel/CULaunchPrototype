@@ -1,7 +1,7 @@
 package com.example.culaunchprototype;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.graphics.Color;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,16 +24,37 @@ public class volunteerList extends AppCompatActivity
         setContentView(linearLayout);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
-        Intent tranferData = getIntent();
-        Button first = new Button(this);
-        String text = tranferData.getStringExtra(Intent.EXTRA_TEXT);
+        TextView title = new TextView(this);
+        title.setText("Volunteer Opportunities");
+        title.setTextColor(Color.parseColor("#009688"));
+        title.setTextSize(32);
+        title.setGravity(17);
+        linearLayout.addView(title);
 
+        Intent transferData = getIntent();
+        Button first = new Button(this);
+        String text = transferData.getStringExtra(Intent.EXTRA_TEXT);
         first.setText(text);
         int i = 250;
 
         //linearLayout.setHeight(i);
         first.setHeight (i);
-
         linearLayout.addView(first);
+
+        //on click
+        first.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onDetailButtonClick();
+            }
+        });
+
+    }
+    public void onDetailButtonClick()
+
+    {
+        Intent intent = new Intent(this, Details.class);
+        intent.putExtra(Intent.EXTRA_TEXT, PostActivity.newRequest.getTitle());
+        startActivity(intent);
     }
 }

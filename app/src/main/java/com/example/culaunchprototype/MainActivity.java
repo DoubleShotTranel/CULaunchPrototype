@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void openActivityRequest()
     {
-        Intent intent = new Intent (this, RequestActivity.class);
+        Intent intent = new Intent (this, PostActivity.class);
         startActivity(intent);
     }
 

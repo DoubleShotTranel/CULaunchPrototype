@@ -7,10 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-public class RequestActivity extends AppCompatActivity
+public class PostActivity extends AppCompatActivity
 {
-    private EditText requestTitleET, disciptionET, emailET, phoneET, fNameET, lNameET;
-    private static Request newRequest;
+    private EditText requestTitleET, disciptionET, emailET, phoneET, fNameET, lNameET, numPeopleET;
+    public static Request newRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -23,6 +23,7 @@ public class RequestActivity extends AppCompatActivity
         this.phoneET = this.findViewById(R.id.phoneET);
         this.fNameET = this.findViewById(R.id.fNameET);
         this.lNameET = this.findViewById(R.id.lNameET);
+        this.numPeopleET = this.findViewById(R.id.numPeopleET);
     }
 
     public void onAddButtonClick(View v)
@@ -33,11 +34,15 @@ public class RequestActivity extends AppCompatActivity
         int phone = Integer.parseInt(this.phoneET.getText().toString());
         String fName = this.fNameET.getText().toString();
         String lName = this.lNameET.getText().toString();
-        this.newRequest = new Request(title, discription, email, phone, fName, lName);
+        int numPeople = Integer.parseInt(this.numPeopleET.getText().toString());
+        this.newRequest = new Request(title, discription, email, phone, fName, lName, numPeople);
 
         String info = this.newRequest.getString();
         Intent transferData = new Intent(this, volunteerList.class);
         transferData.putExtra(Intent.EXTRA_TEXT, info);
         startActivity(transferData);
+
+
+
     }
 }

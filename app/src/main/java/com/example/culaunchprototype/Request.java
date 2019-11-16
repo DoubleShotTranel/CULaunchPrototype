@@ -8,9 +8,10 @@ public class Request
     private String email;
     private String fName;
     private String lName;
+    private int numPeople;
 
 
-    public Request(String title, String description, String email , int phone, String fName, String lName)
+    public Request(String title, String description, String email , int phone, String fName, String lName, int numPeople)
     {
         this.title = title;
         this.description = description;
@@ -18,6 +19,7 @@ public class Request
         this.email = email;
         this.fName = fName;
         this.lName = lName;
+        this.numPeople = numPeople;
     }
 
 
@@ -77,9 +79,13 @@ public class Request
         this.email = email;
     }
 
+    public int getNumPeople() {return numPeople;}
+
+    public void setNumPeople(int numPeople) { this.numPeople = numPeople;}
+
     public String getString()
     {
-        String string = ("Request: " + getTitle() + " Description: " + getDescription());
+        String string = ("Request: " + getTitle() + "\n" + " Description: " + getDescription());
         return string;
     }
 }
