@@ -13,24 +13,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Welcome Back!"
+        android:text="Wonder Workers"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="#009688" />
 
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:text="Your Local Network of Everyday Heroes"
+        android:textColor="#F2F2F2"
+        android:textSize="18sp" />
+
     <Space
         android:layout_width="match_parent"
-        android:layout_height="64dp" />
+        android:layout_height="40dp" />
 
     <Button
         android:id="@+id/volunteerB"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:background="#71E0B6"
+        android:onClick="onListButtonPressed"
         android:text="Volunteer Opportunities" />
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="25dp" />
 
     <Button
         android:id="@+id/requestB"
@@ -42,7 +52,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="25dp" />
 
     <Button
         android:id="@+id/portfolioB"
@@ -51,10 +61,14 @@
         android:background="#71E0B6"
         android:text="Portfolio" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/border" />
+        android:layout_width="wrap_content"
+        android:layout_height="128dp"
+        app:srcCompat="@drawable/volunteer1" />
 
 </LinearLayout>

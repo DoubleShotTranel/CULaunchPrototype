@@ -3,87 +3,173 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/header"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Request Details:"
-        android:textColor="#009688"
-        android:textSize="30sp" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/title"
-        style="@android:style/Widget.AutoCompleteTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Title of Job/Request"
-        android:inputType="textPersonName"
-        android:textColor="#009688"
-        android:textColorHint="#009688" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Brief Discription of Event:"
-        android:textColor="#009688"
-        android:textSize="24sp" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="152dp"
-        android:ems="10"
-        android:inputType="textPersonName" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
-
-    <LinearLayout
-        android:id="@+id/category"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Category"
-            android:textColor="#009688"
-            android:textSize="30sp" />
+            android:orientation="vertical" >
 
-        <Space
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Request Details:"
+                android:textColor="#009688"
+                android:textSize="30sp" />
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/requestTitleET"
+                style="@android:style/Widget.AutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Title of Job/Request"
+                android:inputType="textPersonName"
+                android:textColor="#009688"
+                android:textColorHint="#009688" />
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Brief Description of Event:"
+                android:textColor="#009688"
+                android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Contact Information:"
-        android:textColor="#009688"
-        android:textSize="30sp" />
+            <EditText
+                android:id="@+id/discriptionET"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Category"
+                    android:textColor="#009688"
+                    android:textSize="30sp" />
+
+                <Space
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/numPeopleNeeded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number of People Needed"
+                android:textColor="#009688"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/numPeopleET"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/conInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Information:"
+                android:textColor="#009688"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/fNameET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="First Name"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/lNameET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Last Name"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/phoneET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Phone Number"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/emailET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onAddButtonClick"
+                android:text="post request" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

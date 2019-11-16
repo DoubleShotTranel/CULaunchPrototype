@@ -19,9 +19,20 @@ public class MainActivity extends AppCompatActivity {
         openActivityRequest();
     }
 
+    public void onListButtonPressed(View v)
+    {
+        openListView();
+    }
+
     public void openActivityRequest()
     {
         Intent intent = new Intent (this, RequestActivity.class);
+        startActivity(intent);
+    }
+
+    public void openListView()
+    {
+        Intent intent = new Intent (this, volunteerList.class);
         startActivity(intent);
     }
 }
