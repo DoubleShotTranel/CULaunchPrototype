@@ -24,7 +24,13 @@ public class Details extends AppCompatActivity {
         Intent intent = getIntent();
         String text = intent.getStringExtra(Intent.EXTRA_TEXT);
         String description = PostActivity.newRequest.getDescription();
+        String Name = PostActivity.newRequest.getfName() + " " + PostActivity.newRequest.getlName() ;
         detailTitle.setText(text);
         descriptionTitle.setText(description);
+        nameDetail.setText(Name);
+        String email = PostActivity.newRequest.getEmail();
+        emailDetail.setText(email);
+        String phoneNum = Integer.toString(PostActivity.newRequest.getPhone());
+        phoneDetail.setText(phoneNum);
     }
 }
